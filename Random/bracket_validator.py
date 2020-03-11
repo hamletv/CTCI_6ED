@@ -22,3 +22,6 @@ def bracket_validator_function(string):
                     return False
 
     return bracket_stack == []
+
+print(bracket_validator_function('({{{[[]]}}})'))
+print(bracket_validator_function('({[[]}}})'))
