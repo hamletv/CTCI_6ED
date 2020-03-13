@@ -21,6 +21,11 @@ def self_dividing_number(left, right):
 
     return self_dividing_number_list
 
-left = 1
-right = 10000
-print(len(self_dividing_number(left, right)))
+
+def self_dividing_number2(left, right):
+    return [num for num in range(left, right+1) if '0' not in str(num) and \
+    all((num % int(digit)) == 0 for digit in str(num))]
+
+
+print(self_dividing_number(1,200))
+print(self_dividing_number2(1,100))
